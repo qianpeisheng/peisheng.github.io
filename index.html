@@ -9,7 +9,9 @@
   });
   }}();
   var user = {id:"100", name:"Tom", email:"Tom@gmail.com"};
-  console.log(analytics.user().anonymousId());
+  analytics.on('track', function() {
+      console.log('an event is tracked.');
+  });
 </script>
 
 </head>
